@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",             
+    "rootDir": "./src",        /* TOMA el código de tu carpeta src */
+    "outDir": "./js",          /* LO GUARDA convertido en tu carpeta js */
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"]
+}

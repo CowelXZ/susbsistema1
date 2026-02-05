@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Nuevo Usuario</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header class="top-bar">
+            <h1>Registro de Nuevo Usuario</h1>
+            <div class="logos-container">
+                <img src="./img/logo-fcat.jpg" alt="FCAT" class="top-logo">
+                <img src="./img/logo-uat.jpeg" alt="UAT" class="top-logo">
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            
+            <section class="card form-card">
+                <h2>Datos del Usuario</h2>
+                <h3 class="subtitle">Datos Personales</h3>
+
+                <form class="user-form">
+                    <div class="form-group">
+                        <label>ID Usuario / Clave</label>
+                        <input type="text" value="306001" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre(s)</label>
+                        <input type="text" value="MAL" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Paterno</label>
+                        <input type="text" value="VIBROSITO" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Materno</label>
+                        <input type="text" placeholder="(Opcional)" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ocupación</label>
+                        <select class="input-field">
+                            <option>LA</option>
+                            <option>Ingeniero</option>
+                            <option>Estudiante</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sexo</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="sexo" value="M" checked> Masculino
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="sexo" value="F"> Femenino
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Observaciones</label>
+                        <textarea rows="3" class="input-field"></textarea>
+                    </div>
+                </form>
+            </section>
+
+            <section class="card camera-card">
+                <h2>Cámara</h2>
+                
+                <button class="btn-secondary btn-camera-toggle">
+                    <span class="material-icons">photo_camera</span> Activar Cámara
+                </button>
+
+                <div class="camera-viewport">
+                    <img src="./img/video-placeholder.png" alt="Vista de Cámara" class="video-feed">
+                    </div>
+
+                <div class="thumbnails">
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                </div>
+
+                <div class="status-section">
+                    <p>Estado de Acceso</p>
+                    <div class="status-badges">
+                        <span class="badge success">ACCESO PERMITIDO</span>
+                        <span class="badge danger">ACCESO DENEGADO</span>
+                    </div>
+                </div>
+
+                <div class="camera-actions">
+                    <p class="label-pendiente">PENDIENTE</p>
+                    <div class="action-buttons-row">
+                        <button class="btn-orange icon-btn">
+                            <span class="material-icons">camera_alt</span> Capturar Foto
+                        </button>
+                        <button class="btn-light icon-btn">
+                            <span class="material-icons">delete</span> Limpiar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bottom-action">
+            <button class="btn-main-save">GUARDAR REGISTRO</button>
+        </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
