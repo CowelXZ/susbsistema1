@@ -1,122 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Nuevo Usuario</title>
+    <title>Registro de Nuevo Usuario - UAT</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="main-wrapper">
         <header class="top-bar">
+            <img src="./img/logo-fcat.jpg" alt="FCAT" class="top-logo">
             <h1>Registro de Nuevo Usuario</h1>
-            <div class="logos-container">
-                <img src="./img/logo-fcat.jpg" alt="FCAT" class="top-logo">
-                <img src="./img/logo-uat.jpeg" alt="UAT" class="top-logo">
-            </div>
+            <img src="./img/logo-uat.jpeg" alt="UAT" class="top-logo">
         </header>
 
         <main class="dashboard-grid">
-            
-            <section class="card form-card">
-                <h2>Datos del Usuario</h2>
-                <h3 class="subtitle">Datos Personales</h3>
+
+            <section class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Datos del Usuario</h2>
+                        <small>Datos Personales</small>
+                    </div>
+                </div>
 
                 <form class="user-form">
                     <div class="form-group">
-                        <label>ID Usuario / Clave</label>
-                        <input type="text" value="306001" class="input-field">
+                        <label>Matrícula</label>
+                        <div class="search-wrapper">
+                            <input type="text" placeholder="Buscar matrícula..." class="input-field search-input">
+                            <button type="button" class="search-btn">
+                                <span class="material-icons">search</span>
+                            </button>
+                        </div>
                     </div>
-
                     <div class="form-group">
                         <label>Nombre(s)</label>
-                        <input type="text" value="MAL" class="input-field">
+                        <input type="text" value="" class="input-field">
                     </div>
-
-                    <div class="form-group">
-                        <label>Apellido Paterno</label>
-                        <input type="text" value="VIBROSITO" class="input-field">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Apellido Paterno</label>
+                            <input type="text" value="" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido Materno</label>
+                            <input type="text" placeholder="(Opcional)" class="input-field">
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label>Apellido Materno</label>
-                        <input type="text" placeholder="(Opcional)" class="input-field">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Grado</label>
+                            <input type="text" value="" class="input-field">
+                        </div>
+                        <div class="form-group">
+                            <label>Grupo</label>
+                            <input type="text" placeholder="" class="input-field">
+                        </div>
                     </div>
-
                     <div class="form-group">
-                        <label>Ocupación</label>
+                        <label>Carrera</label>
                         <select class="input-field">
-                            <option>LA</option>
-                            <option>Ingeniero</option>
-                            <option>Estudiante</option>
+                            <option>Contador Público</option>
+                            <option>Lic. en Administración</option>
+                            <option>Lic en Negocios Internacionales</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label>Sexo</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="sexo" value="M" checked> Masculino
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="sexo" value="F"> Femenino
-                            </label>
+                            <label><input type="radio" name="sexo" checked> Masculino</label>
+                            <label><input type="radio" name="sexo"> Femenino</label>
+                            <label><input type="radio" name="sexo"> No Especificado</label>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label>Observaciones</label>
-                        <textarea rows="3" class="input-field"></textarea>
+                        <textarea rows="2" class="input-field"></textarea>
                     </div>
                 </form>
             </section>
 
-            <section class="card camera-card">
-                <h2>Cámara</h2>
-                
-                <button class="btn-secondary btn-camera-toggle">
-                    <span class="material-icons">photo_camera</span> Activar Cámara
-                </button>
+            <section class="card">
+                <div class="card-header">
+                    <h2>Cámara</h2>
+                    <button class="btn-outline">
+                        <span class="material-icons">photo_camera</span> Activar Cámara
+                    </button>
+                </div>
 
-                <div class="camera-viewport">
-                    <img src="./img/video-placeholder.png" alt="Vista de Cámara" class="video-feed">
+                <div class="camera-container">
+                    <div class="camera-viewport">
+                        <img src="./img/video-placeholder.png" alt="Vista" class="video-feed">
                     </div>
-
-                <div class="thumbnails">
-                    <div class="thumb"></div>
-                    <div class="thumb"></div>
+                    <div class="thumbnails">
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                    </div>
                 </div>
 
                 <div class="status-section">
-                    <p>Estado de Acceso</p>
-                    <div class="status-badges">
-                        <span class="badge success">ACCESO PERMITIDO</span>
-                        <span class="badge danger">ACCESO DENEGADO</span>
+                    <label>Estado de Acceso</label>
+                    <div class="status-toggle-group">
+                        <input type="radio" id="status-ok" name="access_status" value="permitido" checked>
+                        <label for="status-ok" class="status-option success-opt">
+                            <span class="material-icons">check_circle</span> PERMITIDO
+                        </label>
+
+                        <input type="radio" id="status-no" name="access_status" value="denegado">
+                        <label for="status-no" class="status-option danger-opt">
+                            <span class="material-icons">cancel</span> DENEGADO
+                        </label>
                     </div>
                 </div>
 
                 <div class="camera-actions">
-                    <p class="label-pendiente">PENDIENTE</p>
                     <div class="action-buttons-row">
-                        <button class="btn-orange icon-btn">
+                        <button class="btn-capture">
                             <span class="material-icons">camera_alt</span> Capturar Foto
                         </button>
-                        <button class="btn-light icon-btn">
+                        <button class="btn-clean">
                             <span class="material-icons">delete</span> Limpiar
                         </button>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="bottom-action">
-            <button class="btn-main-save">GUARDAR REGISTRO</button>
+            <button class="btn-save">GUARDAR REGISTRO</button>
         </footer>
     </div>
 
     <script src="./js/main.js"></script>
 </body>
+
 </html>
